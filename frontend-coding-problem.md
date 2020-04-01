@@ -1,7 +1,11 @@
 # Frontend Evaluation
 
 ### Summary
-Considering you are trying to build a front-end  app for the application which has the option of creating a User Story (i.e ticket or card) which contains information about what kind of task needs to be performed and then the admin will review the User Story, make changes if required. Admin will be able to approve or reject the User story created by the user. Assume there is already a backend application running and you are building the frontend application which talks to backend application by ReSTful web services (Axios).  
+Considering you are trying to build a front-end  app for the application which has the option of creating a User Story (i.e ticket or card) which contains information about what kind of task needs to be performed and then the admin will review the User Story, make changes if required. Admin will be able to approve or reject the User story created by the user. Assume there is already a backend application running and you are building the frontend application which talks to backend application by ReSTful web services (Axios).
+
+Consider you are trying to build a front-end app for an application that has the option of creating a User Story (i.e ticket or card). The App contains information about what kind of task needs to be performed. The admin will review the User Story and make changes if required. The admin will also be able to approve or reject the User story created by the user. 
+
+Please assume that there is already a backend application running and you are building the frontend application which talks to backend application by ReSTful web services (Axios).  
   
 ### Context  
 The application will have 2 different user roles.    
