@@ -93,7 +93,7 @@ After the story is approved or rejected, then update the status of the record on
 As a Bonus, it will be highly appreciated if you can also provide Javascript based unit tests for your front-end code.
 
 ### API Documentation
-Please refer the Readme documentation from API details.
+Please refer the [Readme](./README.md) documentation from API details.
   
 
 
