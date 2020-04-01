@@ -93,26 +93,6 @@ After the story is approved or rejected, then update the status of the record on
 
 As a Bonus, it will be highly appreciated if you can also provide Javascript based unit tests for your front-end code.
 
-## App Flow
-
-And this will produce a flow chart:
-**User Flow:**
-```mermaid
-graph LR
-A[Login Page] --> B(User Story List)
-B -- create--> C(Create Sotry)
-C -- on  success--> B
-```
-
-**Admin Flow:**
-```mermaid
-graph LR
-A[Login Page] --> B(Admin Story List)
-B -- on selection--> C(Story Details Page)
-C -- accept/reject--> B
-```
-
-
 ### API Documentation
 Please refer the Readme documentation from API details.
   
