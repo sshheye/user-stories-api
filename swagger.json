@@ -16,7 +16,7 @@
       "post": {
         "summary": "Login a user",
         "description": "Return a user object along with auth token",
-        "operationId": "addPet",
+        "operationId": "login",
         "consumes": [
           "application/json"
         ],
@@ -46,11 +46,83 @@
           }
         }
       }
+    },
+    "/v1/stories/": {
+      "get": {
+        "summary": "Get Story",
+        "description": "Get story by id",
+        "operationId": "getStory",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "Found Story",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Story"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/stories/{id}": {
+      "get": {
+        "summary": "Get Story",
+        "description": "Get story by id",
+        "operationId": "getStory",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "story id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "Found Story",
+            "schema": {
+              "$ref": "#/definitions/Story"
+            }
+          }
+        }
+      }
     }
   },
   "securityDefinitions": {
-    "BasicAuth": {
-      "type": "basic"
+    "ApiKeyAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "authorization"
     }
   },
   "definitions": {
@@ -71,6 +143,9 @@
     "SigninResponse": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "integer"
+        },
         "firstName": {
           "type": "string"
         },
@@ -81,6 +156,35 @@
           "type": "string"
         },
         "token": {
+          "type": "string"
+        }
+      }
+    },
+    "Story": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "createdBy": {
+          "type": "integer"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "cost": {
+          "type": "integer"
+        },
+        "complexity": {
+          "type": "string"
+        },
+        "estimatedHrs": {
           "type": "string"
         }
       }
