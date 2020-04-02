@@ -47,11 +47,11 @@
         }
       }
     },
-    "/v1/stories/": {
+    "/v1/stories": {
       "get": {
-        "summary": "Get Story",
-        "description": "Get story by id",
-        "operationId": "getStory",
+        "summary": "Get Story List",
+        "description": "Get all the stories owned by a user",
+        "operationId": "getStoryList",
         "consumes": [
           "application/json"
         ],
@@ -74,6 +74,44 @@
               "items": {
                 "$ref": "#/definitions/Story"
               }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create Story",
+        "description": "Create a new story",
+        "operationId": "createStory",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "story id",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateStoryRequest"
+            }
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "201": {
+            "description": "Story got crated",
+            "schema": {
+              "$ref": "#/definitions/Story"
             }
           }
         }
@@ -185,6 +223,23 @@
           "type": "string"
         },
         "estimatedHrs": {
+          "type": "string"
+        }
+      }
+    },
+    "CreateStoryRequest": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "complexity": {
           "type": "string"
         }
       }

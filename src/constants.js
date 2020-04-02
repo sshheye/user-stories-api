@@ -5,5 +5,11 @@ module.exports = {
     roles: {
         admin: "Admin",
         user: "user"
-    }
+    },
+    storyTypes: [
+        "enhancement", "bugfix", "development", "qa"
+    ],
+    storyComplexity: [
+        "low", "mid", "high"
+    ]
 };

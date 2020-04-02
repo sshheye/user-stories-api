@@ -7,5 +7,8 @@
     "jsonwebtoken": "^8.5.1",
     "swagger-jsdoc": "^4.0.0",
     "swagger-ui-express": "^4.1.4"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
