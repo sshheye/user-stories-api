@@ -14,7 +14,7 @@ Each role has its own set of functionalities.
   
 ### Tasks
 **Login as admin or normal user:** Create a login page with following components:
-1.  Email input field
+1.  Email ID input field
 2.  Password field
 3.  Submit button
 4.  A toggle button to login as admin or normal user
@@ -29,7 +29,7 @@ Once logged in, a user of the platform should be able to create a User Story, (i
 
 -   Summary (Input field)
 -   Description (Text area)
--   Type (like enhancement, bugfix, development, qa) (Dropdown)
+-   Type (like enhancement, bugfix, development, QA) (Dropdown)
 -   Complexity (Dropdown with values: Low, Mid, High)
 -   Estimated time for completion (Input)
 -   Cost associated to it (numeric Input showing $ as prefix of input)
@@ -41,7 +41,7 @@ Once the story is created take the user to story list page.
 ### User Story List
  Create a list page with the following columns to show the stories created by the logged in user:
 
--   Id
+-   ID
 -   Summary
 -   Description
 -   Type
@@ -49,14 +49,14 @@ Once the story is created take the user to story list page.
 -   Estimated time for completion
 -   Cost
 
-The user should be able to sort the stories by the story id and complexity. To keep it simple, sorting will be done based only one column at a time, no chaining is needed.
+The user should be able to sort the stories by the Story ID and complexity. To keep it simple, sorting will be done based only one column at a time, no chaining is needed.
 
 The user should be able to filter the stories by type
 
 ### Admin Story List
 When logged in as Admin, the admin should be able to see all the stories. The story list will be the same as the users list view.
 
--   Id
+-   ID
 -   Summary
 -   Description
 -   Type
