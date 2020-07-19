@@ -12,6 +12,7 @@ const authenticate = (req, res, next) => {
     let token = req.headers.authorization;
     if (token) {
         try {
+            token = token.replace("Bearer ", "");
             req.user = decode(token);
             return next();
         } catch (e) {
