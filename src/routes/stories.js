@@ -69,6 +69,27 @@ router.get("/:id", (req, res) => {
     res.sendStatus(400);
 });
 
+router.put("/:id/:status", (req, res) => {
+    const combinedStories = getAllStories();
+    const id = parseInt(req.params.id);
+    const status = req.params.status;
+    if(status !== 'accepted' && status !== 'rejected'){
+        return res.sendStatus(400)
+    }
+    const storyById = combinedStories.find(story => story.id === id);
+    if (!storyById) {
+        return res.sendStatus(404);
+    }
+    if (isAdmin(req)) {
+        storyById.status = status
+        return res.json(storyById);
+    }
+    if (isUser(req)) {
+        res.sendStatus(403)
+    }
+    res.sendStatus(400);
+});
+
 function getAllStories() {
     return tempStorage.concat(stories);
 }

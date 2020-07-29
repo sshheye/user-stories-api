@@ -154,6 +154,52 @@
           }
         }
       }
+    },
+    "/v1/stories/{id}/{status}": {
+      "put": {
+        "summary": "Set status of the story",
+        "description": "Set the status to be accepted or rejected",
+        "operationId": "updateStory",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "story id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "in": "path",
+            "name": "status",
+            "description": "accepted/rejected",
+            "required": true,
+            "type": "string",
+            "enum": ["accepted", "rejected"]
+          }
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
+          "200": {
+            "description": "Updated story",
+            "schema": {
+              "$ref": "#/definitions/Story"
+            }
+          }
+        }
+      }
     }
   },
   "securityDefinitions": {
@@ -223,6 +269,9 @@
           "type": "string"
         },
         "estimatedHrs": {
+          "type": "string"
+        },
+        "status": {
           "type": "string"
         }
       }
