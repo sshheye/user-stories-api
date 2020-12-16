@@ -1,4 +1,4 @@
-# Archimydes Mock API Server
+# User Stories Mock API Server
 
 This application is a simple api server which provides the set of APIs required to build the app given in the frontend coding challenge. 
 
