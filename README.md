@@ -55,7 +55,6 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 ## Install    
       
     $ git clone https://github.com/sshheye/user-stories-api.git 
-    $ cd coding-challenges
     $ npm install
 
 ## Running the project
