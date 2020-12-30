@@ -9,7 +9,7 @@
   "host": "https://user-stories-api.herokuapp.com",
   "basePath": "/api",
   "schemes": [
-    "http"
+    "http","https"
   ],
   "paths": {
     "/v1/signin": {
