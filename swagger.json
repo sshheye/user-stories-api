@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "API doc for Archimydes mock api server",
+    "description": "User stories API Doc",
     "version": "1.0.0",
-    "title": "Archimydes Mock API Doc",
+    "title": "User stories API Doc",
     "termsOfService": "http://swagger.io/terms/"
   },
   "host": "localhost:3000",
