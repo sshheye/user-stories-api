@@ -18,6 +18,8 @@ router.use("/stories", authenticate, storiesRouter);
 app.use('/api/v1', router);
 
 const port = process.env.PORT || 3000;
+app.set('port', port);
 app.listen(port);
 console.log(`Api server listerning at port ${port}`);
 console.log(`Swager API Doc is available now at http://localhost:${port}/api-docs`);
+
