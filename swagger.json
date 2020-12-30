@@ -6,7 +6,7 @@
     "title": "User stories API Doc",
     "termsOfService": "http://swagger.io/terms/"
   },
-  "host": "localhost:3000",
+  "host": "https://user-stories-api.herokuapp.com",
   "basePath": "/api",
   "schemes": [
     "http"
